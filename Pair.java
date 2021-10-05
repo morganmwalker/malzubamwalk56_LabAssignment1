@@ -55,6 +55,8 @@ public class Pair<Y, N> {
 
         } while (cont == 'y' || cont == 'Y');
 
+        getRep_MariamMorgan(yn);
+
         footer(); // print footer
     }
 
@@ -82,11 +84,20 @@ public class Pair<Y, N> {
         return value;
     }
 
+    // question (d)
     public static <E>ArrayList<E> getRep_MariamMorgan(Pair[] pa){
-    ArrayList<String> repArray = new ArrayList<String>();
-    ArrayList<Integer> yearArray = new ArrayList<Integer>();
+        ArrayList<String> repArray = new ArrayList<String>();
 
-    return 
+        for (int i = 0; i < pa.length; i++) {
+            if (repArray.contains(pa[i].getKey().toString()) == false) {
+                repArray.add(pa[i].getKey().toString());
+                repArray.add(pa[i].getValue().toString());
+            }
+        }
+
+        System.out.println(repArray.toString());
+
+        return (ArrayList<E>) repArray;
     }
 
     public static void header() {

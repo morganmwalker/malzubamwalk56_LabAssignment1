@@ -1,4 +1,4 @@
-package LA1Q1;
+package LA1Q1222;
 
 import java.util.ArrayList;
 import java.util.Arrays;

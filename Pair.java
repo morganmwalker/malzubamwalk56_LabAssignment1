@@ -1,4 +1,4 @@
-package LA1Q12;
+package LA1Q1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -82,9 +82,17 @@ public class Pair<Y, N> {
         return value;
     }
 
+    public static <E>ArrayList<E> getRep_MariamMorgan(Pair[] pa){
+    ArrayList<String> repArray = new ArrayList<String>();
+    ArrayList<Integer> yearArray = new ArrayList<Integer>();
+
+    return 
+    }
+
     public static void header() {
         System.out.println("*************************");
-        System.out.println("Name: Morgan Walker\nStudent Number: 251183118");
+        System.out.println("Name: Morgan Walker and Mariam Al-Zubaidi\nStudent Number: 251183118 and 251077904");
+        System.out.println("Goal of this project: ");
         System.out.println("*************************\n");
     }
 

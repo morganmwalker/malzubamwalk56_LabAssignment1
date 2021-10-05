@@ -95,7 +95,13 @@ public class Pair<Y, N> {
             }
         }
 
-        System.out.println(repArray.toString());
+
+            for(int i = 0; i < repArray.size() ; i+=2){
+                System.out.print(repArray.get(i) + " - ");
+                System.out.println(repArray.get(i+1));
+            }
+
+        //System.out.println(repArray);
 
         return (ArrayList<E>) repArray;
     }

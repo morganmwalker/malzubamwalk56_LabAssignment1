@@ -98,7 +98,9 @@ public class Pair<Y, N> {
 
     public static void footer() {
         System.out.println("\n*************************");
-        System.out.println("Thanks, and goodbye!");
+        System.out.println("This is timeOfDay on theDate");
+        System.out.println("Completion of Lab Assignment 1 is successful");
+        System.out.println("Goodbye! Morgan Walker and Mariam Al-Zubaidi");
         System.out.println("*************************");
     }
 }

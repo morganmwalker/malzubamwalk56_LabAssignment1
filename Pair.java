@@ -63,7 +63,7 @@ public class Pair<Y, N> {
             System.out.print("Do you want to continue? (y/n): ");
             cont = scan.next().charAt(0);
 
-            while ((cont != 'n') && (cont != 'y')) {
+            while (((cont != 'n') && (cont != 'y')) && ((cont != 'N') && (cont != 'Y')) ) {
                 System.out.print("Invalid Entry! Enter y or n: ");
                 cont = scan.next().charAt(0);
             }

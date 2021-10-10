@@ -1,7 +1,9 @@
 package LA1Q1;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Pair<Y, N> {
@@ -148,8 +150,12 @@ public class Pair<Y, N> {
 
     //footer method
     public static void footer() {
+        Date time = new Date();
+        SimpleDateFormat theDate = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = new Date();
+        SimpleDateFormat theTime = new SimpleDateFormat("HH:mm:ss");
         System.out.println("\n*****************************");
-        System.out.println("This is timeOfDay on theDate");
+        System.out.printf("This is %s on %s\n", theTime.format(time), theDate.format(date));
         System.out.println("Completion of Lab Assignment 1 is successful");
         System.out.println("Goodbye! Morgan Walker and Mariam Al-Zubaidi");
         System.out.println("*****************************");

@@ -30,6 +30,10 @@ public class StackDemo0 {
         
         // store the distance metric as a String variable
         String dm = String.valueOf(newStack.search("251183118"));
+        
+        for (int i = 0; i < 3 ; i++) {
+            System.out.println(newStack.pop());
+        }
 
     }
 

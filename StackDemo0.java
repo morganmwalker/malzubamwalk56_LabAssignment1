@@ -25,6 +25,8 @@ public class StackDemo0 {
         System.out.println("The value at the top is: " + newStack.peek());
         
         //search the stack for the first student number
+        System.out.println("Searching for 251183118...");
+        System.out.printf("The item has been found in distance %s with reference to the top", newStack.search("251183118"));
 
     }
 

@@ -50,7 +50,6 @@ public class Pair<Y, N> {
                 }
             }
 
-
             int count = 0; // holds number of students from user input year
             String names = ""; // holds list of names from user input year
 
@@ -121,7 +120,7 @@ public class Pair<Y, N> {
         //creating a new ArrayList that is empty
         ArrayList<String> repArray = new ArrayList<String>();
 
-        //...
+        // add the year and name of the reps to the array only if a rep for that year is not already in the array
         for (int i = 0; i < pa.length; i++) {
             if (repArray.contains(pa[i].getKey().toString()) == false) {
                 repArray.add(pa[i].getKey().toString());

@@ -11,7 +11,7 @@ public class MyStack<E> {
         objectArray = new MyStack[length];
     }
 
-    // methods (return values are placeholders)
+    // method to test if the stack is empty
     public boolean empty() {
         if (length == 0) {
             return true;
@@ -20,12 +20,12 @@ public class MyStack<E> {
         }
     }
 
-    //returns the value at the top of the array
+    //method that returns the value at the top of the array
     public E peek() {
         return (E) objectArray[length - 1];
     }
 
-    //pop method
+    //method that will remove the object at the top of the stack abd returns it
     public E pop() {
         E popped;
         Object[] newArray = new Object[length];
@@ -39,32 +39,37 @@ public class MyStack<E> {
         System.arraycopy(objectArray, 0, newArray, 0, newArray.length);
         //myArray is referring to the copied array one
         objectArray = newArray;
-        return popped;
+        return popped;   //returns removed item
     }
 
-    // push method
+
+    // method that will push items to the top of the stack
     public E push(E data) {
         //increment array size by 1
         length++;
         Object[] newArray = new Object[length];
         //copy values from original array to the new Array
         System.arraycopy(objectArray, 0, newArray, 0, objectArray.length);
+        //size of the array will be the passed parameter data
         newArray[objectArray.length] = data;
         objectArray = newArray;
         return data;
     }
 
-    // search method
+    // method that will search the stack for the value that the program wants to find
     public int search(Object valueToBeFound) {
+        //loop to search for the value
         for (int i = 0; i < objectArray.length; i++) {
             if (objectArray[i] == valueToBeFound) {
-                return objectArray.length - i; // returns 1-based position with respect to top of stack
+                //returns 1-based position with respect to top of stack
+                return objectArray.length - i;
             }
         }
+        //returns -1 if the element doesn't exist in the stack
         return -1;
     }
 
-    // toString method
+    //toString method that will print the contents in the stack
     @Override
     public String toString() {
         if (empty()) {

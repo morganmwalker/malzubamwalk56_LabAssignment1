@@ -5,21 +5,26 @@ public class StackDemo0 {
         header();
 
         // create an empty String stack
-        MyStack<String> newStack = new MyStack<>(0);
+        MyStack <String> newStack = new MyStack<>(0);
 
         // print the stack content with the help of the toString() method
         System.out.println(newStack.toString());
 
+        // creating a String array with names and student numbers
         String[] student = {"251077904", "Al-Zubaidi", "Mariam", "251183118", "Walker", "Morgan"};
 
+        //pushing each element of the student array to the stack using push() method
         System.out.println("Pushing the String values to the stack....");
-        for (int i = 0; i < student.length; i++) {
+        for (int i = 0; i < student.length ; i++) {
             newStack.push(student[i]);
         }
-
+        //printing the stack that now contains the names and student numbers
         System.out.println(newStack.toString());
 
+        // printing the top of the stack using the peek method
         System.out.println("The value at the top is: " + newStack.peek());
+        
+        //search the stack for the first student number
 
     }
 

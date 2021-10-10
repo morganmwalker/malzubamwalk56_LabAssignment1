@@ -44,8 +44,12 @@ public class MyStack<E> {
         return data;
     }
 
-    public int search(Object data) {
-        return 0;
+    public int search(Object valueToBeFound) {
+        for (int i = 0; i < objectArray.length; i++) {
+            if (objectArray[i] == valueToBeFound) {
+                return objectArray.length - i;
+            }
+        } return -1;
     }
 
     @Override

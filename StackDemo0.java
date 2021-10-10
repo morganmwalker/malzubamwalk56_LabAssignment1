@@ -5,21 +5,21 @@ public class StackDemo0 {
         header();
 
         // create an empty String stack
-        MyStack <String> newStack = new MyStack<>(0);
+        MyStack<String> newStack = new MyStack<>(0);
 
         // print the stack content with the help of the toString() method
-        System.out.println("The Stack is empty! " + newStack.toString());
+        System.out.println(newStack.toString());
 
         String[] student = {"251077904", "Al-Zubaidi", "Mariam", "251183118", "Walker", "Morgan"};
 
         System.out.println("Pushing the String values to the stack....");
-        //newStack.toString(student[0]);
-
-        /*for (int i = 0; i < student.length ; i++) {
+        for (int i = 0; i < student.length; i++) {
             newStack.push(student[i]);
-        }*/
+        }
 
+        System.out.println(newStack.toString());
 
+        System.out.println("The value at the top is: " + newStack.peek());
 
     }
 

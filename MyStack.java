@@ -31,8 +31,19 @@ public class MyStack<E> {
     }
 
     public E pop() {
-            E element = (E) objectArray[--length];
-            return element;
+           public E pop() {
+        E popped;
+        Object[] newArray = new Object[length];
+
+        //save the popped data in the variable popped
+        popped = (E) objectArray[objectArray.length - 1];
+        //decrement array size by 1
+        newArray = new Object[objectArray.length - 1];
+        //except the popped element, copy the other elements from myArray to newArray
+        System.arraycopy(objectArray, 0, newArray, 0, newArray.length);
+        objectArray = newArray; //myArray is referring to the revised one
+        newArray = null; //not mandatory but it is a good practice
+        return popped;
         }
 
     public E push(E data) {

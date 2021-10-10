@@ -1,7 +1,5 @@
 package LA1Q2;
 
-import LA1Q1.Pair;
-
 import java.util.Arrays;
 
 public class MyStack<E> {
@@ -27,7 +25,7 @@ public class MyStack<E> {
         return (E) objectArray[length - 1];
     }
 
-
+    //pop method
     public E pop() {
         E popped;
         Object[] newArray = new Object[length];
@@ -44,7 +42,7 @@ public class MyStack<E> {
         return popped;
     }
 
-
+    // push method
     public E push(E data) {
         //increment array size by 1
         length++;
@@ -56,15 +54,17 @@ public class MyStack<E> {
         return data;
     }
 
+    // search method
     public int search(Object valueToBeFound) {
         for (int i = 0; i < objectArray.length; i++) {
             if (objectArray[i] == valueToBeFound) {
-                return objectArray.length - i;
+                return objectArray.length - i; // returns 1-based position with respect to top of stack
             }
         }
         return -1;
     }
 
+    // toString method
     @Override
     public String toString() {
         if (empty()) {

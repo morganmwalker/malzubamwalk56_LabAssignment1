@@ -27,24 +27,7 @@ public class MyStack<E> {
 
     public E peek() {
         return (E) objectArray[length-1];
-        //return null;
     }
-
-    public E pop() {
-           public E pop() {
-        E popped;
-        Object[] newArray = new Object[length];
-
-        //save the popped data in the variable popped
-        popped = (E) objectArray[objectArray.length - 1];
-        //decrement array size by 1
-        newArray = new Object[objectArray.length - 1];
-        //except the popped element, copy the other elements from myArray to newArray
-        System.arraycopy(objectArray, 0, newArray, 0, newArray.length);
-        objectArray = newArray; //myArray is referring to the revised one
-        newArray = null; //not mandatory but it is a good practice
-        return popped;
-        }
 
     public E push(E data) {
         //increment array size by 1
@@ -53,8 +36,25 @@ public class MyStack<E> {
         System.arraycopy(objectArray,0,newArray,0,objectArray.length);
         newArray[objectArray.length] = data;
         objectArray = newArray;
+        newArray = null;
         return data;
     }
+
+        public E pop() {
+            E popped;
+            Object[] newArray = new Object[length];
+
+            //save the popped data in the variable popped
+            popped = (E) objectArray[objectArray.length - 1];
+            //decrement array size by 1
+            length--;
+            newArray = new Object[objectArray.length - 1];
+            //except the popped element, copy the other elements from myArray to newArray
+            System.arraycopy(objectArray, 0, newArray, 0, newArray.length);
+            objectArray = newArray;
+            newArray = null;
+            return popped;
+        }
 
     public int search(Object valueToBeFound) {
         for (int i = 0; i < objectArray.length; i++) {

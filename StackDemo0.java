@@ -27,6 +27,9 @@ public class StackDemo0 {
         //search the stack for the first student number
         System.out.println("Searching for 251183118...");
         System.out.printf("The item has been found in distance %s with reference to the top", newStack.search("251183118"));
+        
+        // store the distance metric as a String variable
+        String dm = String.valueOf(newStack.search("251183118"));
 
     }
 

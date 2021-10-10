@@ -43,4 +43,18 @@ public class StackDemo0 {
         System.out.println("Goal of this project: ");
         System.out.println("*************************\n");
     }
+    
+    public static <E> void footer(E v) {
+        System.out.println("\nTeam Member 1 info.....");
+        System.out.println("    First Name: ");
+        System.out.println("    Last Name: ");
+        System.out.println("    Student Number: ");
+        System.out.println("Team Member 2 info.....");
+        System.out.println("    First Name: ");
+        System.out.println("    Last Name: ");
+        System.out.println("    Student Number: ");
+        System.out.println("Here is the status of the Stack...");
+        System.out.println(v);
+        System.out.println("Goodbye!");
+    }
 }

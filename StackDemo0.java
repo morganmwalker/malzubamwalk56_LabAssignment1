@@ -45,16 +45,17 @@ public class StackDemo0 {
     }
     
     public static <E> void footer(E v) {
+        MyStack<String> finalStack = (MyStack<String>) v;
         System.out.println("\nTeam Member 1 info.....");
-        System.out.println("    First Name: ");
-        System.out.println("    Last Name: ");
-        System.out.println("    Student Number: ");
+        System.out.println("    First Name: " + finalStack.pop());
+        System.out.println("    Last Name: " + finalStack.pop());
+        System.out.println("    Student Number: " + finalStack.pop());
         System.out.println("Team Member 2 info.....");
-        System.out.println("    First Name: ");
-        System.out.println("    Last Name: ");
-        System.out.println("    Student Number: ");
+        System.out.println("    First Name: " + finalStack.pop());
+        System.out.println("    Last Name: " + finalStack.pop());
+        System.out.println("    Student Number: " + finalStack.pop());
         System.out.println("Here is the status of the Stack...");
-        System.out.println(v);
+        System.out.println(finalStack);
         System.out.println("Goodbye!");
     }
 }

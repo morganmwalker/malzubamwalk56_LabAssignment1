@@ -50,6 +50,7 @@ public class Pair<Y, N> {
                 }
             }
 
+
             int count = 0; // holds number of students from user input year
             String names = ""; // holds list of names from user input year
 
@@ -141,10 +142,11 @@ public class Pair<Y, N> {
 
     //header method
     public static void header() {
-        System.out.println("*****************************");
+        System.out.println("*******************************************************");
         System.out.println("Name: Morgan Walker and Mariam Al-Zubaidi\nStudent Number: 251183118 and 251077904");
-        System.out.println("Goal of this project: ");
-        System.out.println("*****************************\n");
+        System.out.println("Goal of this project: A program that asks the user what year they want the year leaders from until they do not want to continue anymore\n" +
+                " and then printing the year reps after the user inputs n");
+        System.out.println("*******************************************************\n");
     }
 
     //footer method
@@ -153,10 +155,10 @@ public class Pair<Y, N> {
         SimpleDateFormat theDate = new SimpleDateFormat("dd-MM-yyyy");
         Date date = new Date();
         SimpleDateFormat theTime = new SimpleDateFormat("HH:mm:ss");
-        System.out.println("\n*****************************");
+        System.out.println("\n********************************************");
         System.out.printf("This is %s on %s\n", theTime.format(time), theDate.format(date));
         System.out.println("Completion of Lab Assignment 1 is successful");
         System.out.println("Goodbye! Morgan Walker and Mariam Al-Zubaidi");
-        System.out.println("*****************************");
+        System.out.println("********************************************");
     }
 }

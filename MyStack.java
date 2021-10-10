@@ -26,7 +26,8 @@ public class MyStack<E> {
     }
 
     public E peek() {
-        return null;
+        return (E) objectArray[length-1];
+        //return null;
     }
 
     public E pop() {
@@ -36,22 +37,22 @@ public class MyStack<E> {
     public E push(E data) {
         //increment array size by 1
         length++;
-        objectArray = new Object[length];
-//copy the existing elements from myArray to newArray
-        //System.arraycopy(myArray,0,newArray,0,myArray.length);
-//push the new data to the top
-        objectArray[length-1] = data;
-        //myArray = newArray;
-        //objectArray = null; //not mandatory but it is a good practice
+        Object[] newArray = new Object[length];
+        System.arraycopy(objectArray,0,newArray,0,objectArray.length);
+        newArray[objectArray.length] = data;
+        objectArray = newArray;
         return data;
     }
 
-    public int search(Object nName) {
+    public int search(Object data) {
         return 0;
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(objectArray) ;
+        if (empty()) {
+            System.out.print("The stack is Empty! ");
+        }
+        return "The stack: " + Arrays.toString(objectArray);
     }
 }

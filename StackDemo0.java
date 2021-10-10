@@ -23,18 +23,34 @@ public class StackDemo0 {
 
         // printing the top of the stack using the peek method
         System.out.println("The value at the top is: " + newStack.peek());
-        
+
         //search the stack for the first student number
         System.out.println("Searching for 251183118...");
-        System.out.printf("The item has been found in distance %s with reference to the top", newStack.search("251183118"));
-        
-        // store the distance metric as a String variable
-        String dm = String.valueOf(newStack.search("251183118"));
-        
-        for (int i = 0; i < 3 ; i++) {
-            System.out.println(newStack.pop());
-        }
+        System.out.printf("The item has been found in distance %s with reference to the top\n", newStack.search("251183118"));
 
+        // store the distance metric as a String variable
+        String studentNumber = student[(newStack.search("251183118"))];
+
+        // convert student number to integer using parseInt method
+        int sn = (Integer.parseInt(studentNumber));
+
+        // find last digit
+        int snLast = sn%10;
+
+        // find first digit
+        int snFirst = 0;
+        while(sn!=0) {
+            snFirst = sn%10;
+            sn /= 10;
+        }
+        System.out.println("The first number in the student ID is " + snFirst);
+
+        System.out.println("The last number in the student ID is " + snLast);
+
+        // print the average of the first and last digit
+        System.out.println("The average of these two numbers is: " + ((double)snFirst + (double)snLast)/2);
+
+        footer(newStack);
     }
 
     public static void header() {
@@ -43,7 +59,7 @@ public class StackDemo0 {
         System.out.println("Goal of this project: ");
         System.out.println("*************************\n");
     }
-    
+
     public static <E> void footer(E v) {
         MyStack<String> finalStack = (MyStack<String>) v;
         System.out.println("\nTeam Member 1 info.....");
@@ -55,7 +71,7 @@ public class StackDemo0 {
         System.out.println("    Last Name: " + finalStack.pop());
         System.out.println("    Student Number: " + finalStack.pop());
         System.out.println("Here is the status of the Stack...");
-        System.out.println(finalStack);
+        System.out.println(v.toString());
         System.out.println("Goodbye!");
     }
 }

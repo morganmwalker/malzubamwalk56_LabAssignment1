@@ -17,19 +17,33 @@ public class MyStack<E> {
 
     // methods (return values are placeholders)
     public boolean empty() {
-        return true;
+        if (length == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
-    public <E> boolean peek() {
-        return true;
+    public E peek() {
+        return null;
     }
 
-    public <E> boolean pop() {
-        return true;
+    public E pop() {
+        return null;
     }
 
-    public <E> void push(E anyName) {
-
+    public E push(E data) {
+        //increment array size by 1
+        length++;
+        objectArray = new Object[length];
+//copy the existing elements from myArray to newArray
+        //System.arraycopy(myArray,0,newArray,0,myArray.length);
+//push the new data to the top
+        objectArray[length-1] = data;
+        //myArray = newArray;
+        //objectArray = null; //not mandatory but it is a good practice
+        return data;
     }
 
     public int search(Object nName) {
@@ -38,6 +52,6 @@ public class MyStack<E> {
 
     @Override
     public String toString() {
-        return "MyStack{}";
+        return Arrays.toString(objectArray) ;
     }
 }

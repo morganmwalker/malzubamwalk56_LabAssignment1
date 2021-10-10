@@ -31,8 +31,9 @@ public class MyStack<E> {
     }
 
     public E pop() {
-        return null;
-    }
+            E element = (E) objectArray[--length];
+            return element;
+        }
 
     public E push(E data) {
         //increment array size by 1
